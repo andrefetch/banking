@@ -11,3 +11,10 @@ class Account:
     def withdraw(self, amount):
         if amount > self.balance:
             raise Exception(f"Can't withdraw {amount} because it's more than {self.balance}")
+        self.balance -= amount
+    
+    def get_balance(self):
+        return self.balance
+    
+    def get_owner(self):
+        return self.owner
